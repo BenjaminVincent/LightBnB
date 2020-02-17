@@ -201,7 +201,7 @@ const addProperty = function(property) {
         number_of_bedrooms
         )
         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
-        RETURNING *`;
+        RETURNING *;`;
 
   return db.query(str, queryParams)
   .then(res => res.rows);
